@@ -21,9 +21,14 @@
 	return [documentsDirectoy stringByAppendingPathComponent:STORE_FOLDER];
 }
 
-+ (void)setStorePath:(NSString *)path
++ (NSString *)musicsCachePath
+{
+	return [[DoubanFMUtilities storePath] stringByAppendingPathComponent:MUSIC_CACHE_FOLDER];
+}
+
++ (void)creatPathIfNeed:(NSString *)path
 {   
-	NSFileManager *fileManager = [[[NSFileManager alloc] init] autorelease];
+	NSFileManager *fileManager = [NSFileManager defaultManager];
 	BOOL isDirectory = NO;
     BOOL exists = [fileManager fileExistsAtPath:path isDirectory:&isDirectory];
     if (exists && !isDirectory) {
@@ -98,6 +103,11 @@
 + (NSString *)encodeURL:(NSString *)urlString
 {
     return [(NSString *) CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)[[urlString mutableCopy] autorelease], NULL, CFSTR("￼!*'();:@&=+$,/?%#[]"), kCFStringEncodingUTF8) autorelease];
+}
+
++ (NSString *)filePathWithSid:(NSString *)sid
+{
+    return [[DoubanFMUtilities musicsCachePath] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.mp4", sid]];
 }
 
 @end

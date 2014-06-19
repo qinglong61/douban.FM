@@ -6,4 +6,16 @@
 
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
+
+#ifndef __OPTIMIZE__
+#define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define DLog(...)
+#endif
+
+// ALog always displays output regardless of the DEBUG setting
+#define ALog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+
+#define RGB(r, g, b, a) [NSColor colorWithDeviceRed:r green:g blue:b alpha:a]
+
 #endif

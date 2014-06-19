@@ -8,8 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface PWAppDelegate : NSObject <NSApplicationDelegate>
+@interface PWAppDelegate : NSObject <NSApplicationDelegate, NSWindowDelegate>
 
-@property (assign) IBOutlet NSWindow *window;
+@property (strong) NSWindow *window;
+@property (strong) NSToolbarItem *toolbarColor;
 
 @end

@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface DoubanChannelListView : NSView
+@interface DoubanChannelListView : NSView <NSOutlineViewDataSource, NSOutlineViewDelegate>
 
 @end

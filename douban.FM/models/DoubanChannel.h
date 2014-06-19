@@ -10,4 +10,11 @@
 
 @interface DoubanChannel : NSObject
 
+@property (nonatomic, retain) NSString *channelId;
+@property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *cover;
+@property (nonatomic, retain) NSString *intro;
+@property (nonatomic, assign) NSInteger songCount;
+@property (nonatomic, retain) NSString *collected;
+
 @end

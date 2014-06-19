@@ -15,7 +15,8 @@
 @property (nonatomic, assign) BOOL liked;
 @property (nonatomic, retain) NSString *path;
 @property (nonatomic, retain) NSString *picture;
-@property (nonatomic, retain) NSString *subject_title;
 @property (nonatomic, retain) NSString *title;
+@property (nonatomic, assign) BOOL cached;
+@property (nonatomic, retain) NSString *remotePath;
 
 @end

@@ -10,4 +10,8 @@
 
 @interface DoubanWindow : NSWindow
 
+- (id)initWithFrame:(CGRect)frameRect;
+- (void)show;
+- (void)hide;
+
 @end

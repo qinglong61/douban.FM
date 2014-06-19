@@ -7,8 +7,14 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "PWAppDelegate.h"
 
 int main(int argc, const char * argv[])
 {
-    return NSApplicationMain(argc, argv);
+    @autoreleasepool {
+        PWAppDelegate *delegate = [[PWAppDelegate alloc] init];
+        [[NSApplication sharedApplication] setDelegate:delegate];
+        [NSApp run];
+    }
+    return EXIT_SUCCESS;
 }

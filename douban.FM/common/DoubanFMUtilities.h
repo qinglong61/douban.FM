@@ -11,10 +11,12 @@
 @interface DoubanFMUtilities : NSObject
 
 + (NSString *)storePath;
-+ (void)setStorePath:(NSString *)path;
++ (NSString *)musicsCachePath;
++ (void)creatPathIfNeed:(NSString *)path;
 + (id)readWithFileName:(NSString *)fileName;
 + (BOOL)write:(id)plist fileName:(NSString *)fileName;
 + (void)setCookieName:(NSString *)name value:(NSString *)value;
 + (NSString *)encodeURL:(NSString *)urlString;
++ (NSString *)filePathWithSid:(NSString *)sid;
 
 @end

@@ -6,8 +6,8 @@
 //  Copyright (c) 2014年 duan.qinglun. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import "DoubanWindow.h"
 
-@interface DoubanLoginWindow : NSWindow
+@interface DoubanLoginWindow : DoubanWindow
 
 @end

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "DoubanLiked.h"
 #import "DoubanSong.h"
+#import "DoubanChannel.h"
 #import "DoubanUser.h"
 
 @interface Douban : NSObject

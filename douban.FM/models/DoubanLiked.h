@@ -10,7 +10,6 @@
 
 @interface DoubanLiked : DoubanBaseModel
 
-@property (nonatomic, assign) NSUInteger total;
 @property (nonatomic, retain) NSArray *songs;
 
 @end

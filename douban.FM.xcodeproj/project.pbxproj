@@ -12,23 +12,28 @@
 		F4075DE1184DDD8300032BD4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4075DE0184DDD8300032BD4 /* main.m */; };
 		F4075DE5184DDD8300032BD4 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F4075DE3184DDD8300032BD4 /* Credits.rtf */; };
 		F4075DE8184DDD8300032BD4 /* PWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4075DE7184DDD8300032BD4 /* PWAppDelegate.m */; };
-		F4075DEB184DDD8300032BD4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4075DE9184DDD8300032BD4 /* MainMenu.xib */; };
-		F4075DED184DDD8300032BD4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4075DEC184DDD8300032BD4 /* Images.xcassets */; };
-		F4075DF4184DDD8300032BD4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4075DF3184DDD8300032BD4 /* XCTest.framework */; };
-		F4075DF5184DDD8300032BD4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4075DD4184DDD8300032BD4 /* Cocoa.framework */; };
-		F4075DFD184DDD8300032BD4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4075DFB184DDD8300032BD4 /* InfoPlist.strings */; };
-		F4075DFF184DDD8300032BD4 /* douban_FMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F4075DFE184DDD8300032BD4 /* douban_FMTests.m */; };
+		F42797BF1946F2210034DD3B /* DoubanChannelListView.m in Sources */ = {isa = PBXBuildFile; fileRef = F42797BE1946F2210034DD3B /* DoubanChannelListView.m */; };
+		F42797C2194736000034DD3B /* DoubanChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = F42797C1194736000034DD3B /* DoubanChannel.m */; };
+		F43A2DBE1933693800B37D25 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43A2DBD1933693800B37D25 /* CoreMedia.framework */; };
+		F43DEF9F1945D988007D436E /* DoubanRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F43DEF9E1945D988007D436E /* DoubanRequest.m */; };
+		F460B59819373B1700FA79C9 /* DoubanPlayListView.m in Sources */ = {isa = PBXBuildFile; fileRef = F460B59719373B1700FA79C9 /* DoubanPlayListView.m */; };
+		F460B59B19373B4300FA79C9 /* DoubanSongListView.m in Sources */ = {isa = PBXBuildFile; fileRef = F460B59A19373B4300FA79C9 /* DoubanSongListView.m */; };
+		F460B59E19373C1E00FA79C9 /* DoubanPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F460B59D19373C1E00FA79C9 /* DoubanPlayView.m */; };
+		F46324B3184F089400104286 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46324B2184F089400104286 /* WebKit.framework */; };
+		F4972243191B779300F1C563 /* DoubanFMUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F497223C191B779300F1C563 /* DoubanFMUtilities.m */; };
+		F4972252191B77C700F1C563 /* Douban.m in Sources */ = {isa = PBXBuildFile; fileRef = F4972249191B77C700F1C563 /* Douban.m */; };
+		F4972253191B77C700F1C563 /* DoubanBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F497224B191B77C700F1C563 /* DoubanBaseModel.m */; };
+		F4972254191B77C700F1C563 /* DoubanLiked.m in Sources */ = {isa = PBXBuildFile; fileRef = F497224D191B77C700F1C563 /* DoubanLiked.m */; };
+		F4972255191B77C700F1C563 /* DoubanSong.m in Sources */ = {isa = PBXBuildFile; fileRef = F497224F191B77C700F1C563 /* DoubanSong.m */; };
+		F4972256191B77C700F1C563 /* DoubanUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F4972251191B77C700F1C563 /* DoubanUser.m */; };
+		F497227C191B780E00F1C563 /* FBEncryptorAES.m in Sources */ = {isa = PBXBuildFile; fileRef = F497226D191B780E00F1C563 /* FBEncryptorAES.m */; };
+		F497227D191B780E00F1C563 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = F497226F191B780E00F1C563 /* NSData+Base64.m */; };
+		F4972291191B789700F1C563 /* DoubanService.m in Sources */ = {isa = PBXBuildFile; fileRef = F4972290191B789700F1C563 /* DoubanService.m */; };
+		F4972294191B7D9D00F1C563 /* DoubanLoginWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F4972293191B7D9D00F1C563 /* DoubanLoginWindow.m */; };
+		F4972297191B818300F1C563 /* DoubanWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = F4972296191B818300F1C563 /* DoubanWindow.m */; };
+		F49833E6192F304D003BAE90 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F49833E5192F304D003BAE90 /* AVFoundation.framework */; };
+		F49D671A1934A8C700CBB76D /* DoubanDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = F49D67191934A8C700CBB76D /* DoubanDownloader.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		F4075DF6184DDD8300032BD4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F4075DC9184DDD8300032BD4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F4075DD0184DDD8300032BD4;
-			remoteInfo = douban.FM;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F4075DD1184DDD8300032BD4 /* douban.FM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = douban.FM.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,13 +48,46 @@
 		F4075DE4184DDD8300032BD4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		F4075DE6184DDD8300032BD4 /* PWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PWAppDelegate.h; sourceTree = "<group>"; };
 		F4075DE7184DDD8300032BD4 /* PWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PWAppDelegate.m; sourceTree = "<group>"; };
-		F4075DEA184DDD8300032BD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		F4075DEC184DDD8300032BD4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F4075DF2184DDD8300032BD4 /* douban.FMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = douban.FMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F4075DF3184DDD8300032BD4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		F4075DFA184DDD8300032BD4 /* douban.FMTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "douban.FMTests-Info.plist"; sourceTree = "<group>"; };
-		F4075DFC184DDD8300032BD4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F4075DFE184DDD8300032BD4 /* douban_FMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = douban_FMTests.m; sourceTree = "<group>"; };
+		F42797BD1946F2210034DD3B /* DoubanChannelListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubanChannelListView.h; path = view/DoubanChannelListView.h; sourceTree = "<group>"; };
+		F42797BE1946F2210034DD3B /* DoubanChannelListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanChannelListView.m; path = view/DoubanChannelListView.m; sourceTree = "<group>"; };
+		F42797C0194736000034DD3B /* DoubanChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanChannel.h; sourceTree = "<group>"; };
+		F42797C1194736000034DD3B /* DoubanChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanChannel.m; sourceTree = "<group>"; };
+		F43A2DBD1933693800B37D25 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		F43DEF9D1945D988007D436E /* DoubanRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanRequest.h; sourceTree = "<group>"; };
+		F43DEF9E1945D988007D436E /* DoubanRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanRequest.m; sourceTree = "<group>"; };
+		F460B59619373B1700FA79C9 /* DoubanPlayListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubanPlayListView.h; path = view/DoubanPlayListView.h; sourceTree = "<group>"; };
+		F460B59719373B1700FA79C9 /* DoubanPlayListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanPlayListView.m; path = view/DoubanPlayListView.m; sourceTree = "<group>"; };
+		F460B59919373B4300FA79C9 /* DoubanSongListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubanSongListView.h; path = view/DoubanSongListView.h; sourceTree = "<group>"; };
+		F460B59A19373B4300FA79C9 /* DoubanSongListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanSongListView.m; path = view/DoubanSongListView.m; sourceTree = "<group>"; };
+		F460B59C19373C1E00FA79C9 /* DoubanPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubanPlayView.h; path = view/DoubanPlayView.h; sourceTree = "<group>"; };
+		F460B59D19373C1E00FA79C9 /* DoubanPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanPlayView.m; path = view/DoubanPlayView.m; sourceTree = "<group>"; };
+		F46324B2184F089400104286 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		F497223A191B779300F1C563 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		F497223B191B779300F1C563 /* DoubanFMUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanFMUtilities.h; sourceTree = "<group>"; };
+		F497223C191B779300F1C563 /* DoubanFMUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanFMUtilities.m; sourceTree = "<group>"; };
+		F4972248191B77C700F1C563 /* Douban.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Douban.h; sourceTree = "<group>"; };
+		F4972249191B77C700F1C563 /* Douban.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Douban.m; sourceTree = "<group>"; };
+		F497224A191B77C700F1C563 /* DoubanBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanBaseModel.h; sourceTree = "<group>"; };
+		F497224B191B77C700F1C563 /* DoubanBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanBaseModel.m; sourceTree = "<group>"; };
+		F497224C191B77C700F1C563 /* DoubanLiked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanLiked.h; sourceTree = "<group>"; };
+		F497224D191B77C700F1C563 /* DoubanLiked.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanLiked.m; sourceTree = "<group>"; };
+		F497224E191B77C700F1C563 /* DoubanSong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanSong.h; sourceTree = "<group>"; };
+		F497224F191B77C700F1C563 /* DoubanSong.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanSong.m; sourceTree = "<group>"; };
+		F4972250191B77C700F1C563 /* DoubanUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanUser.h; sourceTree = "<group>"; };
+		F4972251191B77C700F1C563 /* DoubanUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanUser.m; sourceTree = "<group>"; };
+		F497226C191B780E00F1C563 /* FBEncryptorAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBEncryptorAES.h; sourceTree = "<group>"; };
+		F497226D191B780E00F1C563 /* FBEncryptorAES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBEncryptorAES.m; sourceTree = "<group>"; };
+		F497226E191B780E00F1C563 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		F497226F191B780E00F1C563 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		F497228F191B789700F1C563 /* DoubanService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubanService.h; path = services/DoubanService.h; sourceTree = "<group>"; };
+		F4972290191B789700F1C563 /* DoubanService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanService.m; path = services/DoubanService.m; sourceTree = "<group>"; };
+		F4972292191B7D9D00F1C563 /* DoubanLoginWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubanLoginWindow.h; path = view/DoubanLoginWindow.h; sourceTree = "<group>"; };
+		F4972293191B7D9D00F1C563 /* DoubanLoginWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanLoginWindow.m; path = view/DoubanLoginWindow.m; sourceTree = "<group>"; };
+		F4972295191B818300F1C563 /* DoubanWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubanWindow.h; path = view/DoubanWindow.h; sourceTree = "<group>"; };
+		F4972296191B818300F1C563 /* DoubanWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanWindow.m; path = view/DoubanWindow.m; sourceTree = "<group>"; };
+		F49833E5192F304D003BAE90 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F49D67181934A8C700CBB76D /* DoubanDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanDownloader.h; sourceTree = "<group>"; };
+		F49D67191934A8C700CBB76D /* DoubanDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanDownloader.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,16 +95,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43A2DBE1933693800B37D25 /* CoreMedia.framework in Frameworks */,
+				F49833E6192F304D003BAE90 /* AVFoundation.framework in Frameworks */,
+				F46324B3184F089400104286 /* WebKit.framework in Frameworks */,
 				F4075DD5184DDD8300032BD4 /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4075DEF184DDD8300032BD4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F4075DF5184DDD8300032BD4 /* Cocoa.framework in Frameworks */,
-				F4075DF4184DDD8300032BD4 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,9 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				F4075DDA184DDD8300032BD4 /* douban.FM */,
-				F4075DF8184DDD8300032BD4 /* douban.FMTests */,
 				F4075DD3184DDD8300032BD4 /* Frameworks */,
 				F4075DD2184DDD8300032BD4 /* Products */,
+				F4075DDB184DDD8300032BD4 /* Supporting Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				F4075DD1184DDD8300032BD4 /* douban.FM.app */,
-				F4075DF2184DDD8300032BD4 /* douban.FMTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,8 +126,10 @@
 		F4075DD3184DDD8300032BD4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F43A2DBD1933693800B37D25 /* CoreMedia.framework */,
+				F49833E5192F304D003BAE90 /* AVFoundation.framework */,
+				F46324B2184F089400104286 /* WebKit.framework */,
 				F4075DD4184DDD8300032BD4 /* Cocoa.framework */,
-				F4075DF3184DDD8300032BD4 /* XCTest.framework */,
 				F4075DD6184DDD8300032BD4 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -115,11 +148,11 @@
 		F4075DDA184DDD8300032BD4 /* douban.FM */ = {
 			isa = PBXGroup;
 			children = (
-				F4075DE6184DDD8300032BD4 /* PWAppDelegate.h */,
-				F4075DE7184DDD8300032BD4 /* PWAppDelegate.m */,
-				F4075DE9184DDD8300032BD4 /* MainMenu.xib */,
-				F4075DEC184DDD8300032BD4 /* Images.xcassets */,
-				F4075DDB184DDD8300032BD4 /* Supporting Files */,
+				F4972257191B780E00F1C563 /* utilities */,
+				F4972247191B77C700F1C563 /* models */,
+				F4972239191B779300F1C563 /* common */,
+				F4972235191B75B800F1C563 /* view */,
+				F45A2D8C18E409D800102951 /* services */,
 			);
 			path = douban.FM;
 			sourceTree = "<group>";
@@ -127,6 +160,8 @@
 		F4075DDB184DDD8300032BD4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F4075DE6184DDD8300032BD4 /* PWAppDelegate.h */,
+				F4075DE7184DDD8300032BD4 /* PWAppDelegate.m */,
 				F4075DDC184DDD8300032BD4 /* douban.FM-Info.plist */,
 				F4075DDD184DDD8300032BD4 /* InfoPlist.strings */,
 				F4075DE0184DDD8300032BD4 /* main.m */,
@@ -134,24 +169,87 @@
 				F4075DE3184DDD8300032BD4 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			path = douban.FM;
 			sourceTree = "<group>";
 		};
-		F4075DF8184DDD8300032BD4 /* douban.FMTests */ = {
+		F45A2D8C18E409D800102951 /* services */ = {
 			isa = PBXGroup;
 			children = (
-				F4075DFE184DDD8300032BD4 /* douban_FMTests.m */,
-				F4075DF9184DDD8300032BD4 /* Supporting Files */,
+				F497228F191B789700F1C563 /* DoubanService.h */,
+				F4972290191B789700F1C563 /* DoubanService.m */,
 			);
-			path = douban.FMTests;
+			name = services;
 			sourceTree = "<group>";
 		};
-		F4075DF9184DDD8300032BD4 /* Supporting Files */ = {
+		F4972235191B75B800F1C563 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				F4075DFA184DDD8300032BD4 /* douban.FMTests-Info.plist */,
-				F4075DFB184DDD8300032BD4 /* InfoPlist.strings */,
+				F4972292191B7D9D00F1C563 /* DoubanLoginWindow.h */,
+				F4972293191B7D9D00F1C563 /* DoubanLoginWindow.m */,
+				F460B59C19373C1E00FA79C9 /* DoubanPlayView.h */,
+				F460B59D19373C1E00FA79C9 /* DoubanPlayView.m */,
+				F4972295191B818300F1C563 /* DoubanWindow.h */,
+				F4972296191B818300F1C563 /* DoubanWindow.m */,
+				F460B59919373B4300FA79C9 /* DoubanSongListView.h */,
+				F460B59A19373B4300FA79C9 /* DoubanSongListView.m */,
+				F460B59619373B1700FA79C9 /* DoubanPlayListView.h */,
+				F460B59719373B1700FA79C9 /* DoubanPlayListView.m */,
+				F42797BD1946F2210034DD3B /* DoubanChannelListView.h */,
+				F42797BE1946F2210034DD3B /* DoubanChannelListView.m */,
 			);
-			name = "Supporting Files";
+			name = view;
+			sourceTree = "<group>";
+		};
+		F4972239191B779300F1C563 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				F497223A191B779300F1C563 /* Constants.h */,
+				F497223B191B779300F1C563 /* DoubanFMUtilities.h */,
+				F497223C191B779300F1C563 /* DoubanFMUtilities.m */,
+				F43DEF9D1945D988007D436E /* DoubanRequest.h */,
+				F43DEF9E1945D988007D436E /* DoubanRequest.m */,
+				F49D67181934A8C700CBB76D /* DoubanDownloader.h */,
+				F49D67191934A8C700CBB76D /* DoubanDownloader.m */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		F4972247191B77C700F1C563 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				F4972248191B77C700F1C563 /* Douban.h */,
+				F4972249191B77C700F1C563 /* Douban.m */,
+				F497224A191B77C700F1C563 /* DoubanBaseModel.h */,
+				F497224B191B77C700F1C563 /* DoubanBaseModel.m */,
+				F497224C191B77C700F1C563 /* DoubanLiked.h */,
+				F497224D191B77C700F1C563 /* DoubanLiked.m */,
+				F497224E191B77C700F1C563 /* DoubanSong.h */,
+				F497224F191B77C700F1C563 /* DoubanSong.m */,
+				F42797C0194736000034DD3B /* DoubanChannel.h */,
+				F42797C1194736000034DD3B /* DoubanChannel.m */,
+				F4972250191B77C700F1C563 /* DoubanUser.h */,
+				F4972251191B77C700F1C563 /* DoubanUser.m */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		F4972257191B780E00F1C563 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F497226B191B780E00F1C563 /* FBEncryptorAES */,
+			);
+			path = utilities;
+			sourceTree = "<group>";
+		};
+		F497226B191B780E00F1C563 /* FBEncryptorAES */ = {
+			isa = PBXGroup;
+			children = (
+				F497226C191B780E00F1C563 /* FBEncryptorAES.h */,
+				F497226D191B780E00F1C563 /* FBEncryptorAES.m */,
+				F497226E191B780E00F1C563 /* NSData+Base64.h */,
+				F497226F191B780E00F1C563 /* NSData+Base64.m */,
+			);
+			path = FBEncryptorAES;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,38 +272,15 @@
 			productReference = F4075DD1184DDD8300032BD4 /* douban.FM.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F4075DF1184DDD8300032BD4 /* douban.FMTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F4075E05184DDD8300032BD4 /* Build configuration list for PBXNativeTarget "douban.FMTests" */;
-			buildPhases = (
-				F4075DEE184DDD8300032BD4 /* Sources */,
-				F4075DEF184DDD8300032BD4 /* Frameworks */,
-				F4075DF0184DDD8300032BD4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F4075DF7184DDD8300032BD4 /* PBXTargetDependency */,
-			);
-			name = douban.FMTests;
-			productName = douban.FMTests;
-			productReference = F4075DF2184DDD8300032BD4 /* douban.FMTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		F4075DC9184DDD8300032BD4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = PW;
+				CLASSPREFIX = Douban;
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = com.pwrd;
-				TargetAttributes = {
-					F4075DF1184DDD8300032BD4 = {
-						TestTargetID = F4075DD0184DDD8300032BD4;
-					};
-				};
+				ORGANIZATIONNAME = duan.qinglun;
 			};
 			buildConfigurationList = F4075DCC184DDD8300032BD4 /* Build configuration list for PBXProject "douban.FM" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -221,7 +296,6 @@
 			projectRoot = "";
 			targets = (
 				F4075DD0184DDD8300032BD4 /* douban.FM */,
-				F4075DF1184DDD8300032BD4 /* douban.FMTests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,17 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4075DDF184DDD8300032BD4 /* InfoPlist.strings in Resources */,
-				F4075DED184DDD8300032BD4 /* Images.xcassets in Resources */,
 				F4075DE5184DDD8300032BD4 /* Credits.rtf in Resources */,
-				F4075DEB184DDD8300032BD4 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4075DF0184DDD8300032BD4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F4075DFD184DDD8300032BD4 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,28 +317,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F49D671A1934A8C700CBB76D /* DoubanDownloader.m in Sources */,
+				F4972294191B7D9D00F1C563 /* DoubanLoginWindow.m in Sources */,
 				F4075DE1184DDD8300032BD4 /* main.m in Sources */,
+				F460B59E19373C1E00FA79C9 /* DoubanPlayView.m in Sources */,
+				F460B59B19373B4300FA79C9 /* DoubanSongListView.m in Sources */,
 				F4075DE8184DDD8300032BD4 /* PWAppDelegate.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F4075DEE184DDD8300032BD4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F4075DFF184DDD8300032BD4 /* douban_FMTests.m in Sources */,
+				F4972291191B789700F1C563 /* DoubanService.m in Sources */,
+				F4972253191B77C700F1C563 /* DoubanBaseModel.m in Sources */,
+				F4972254191B77C700F1C563 /* DoubanLiked.m in Sources */,
+				F4972297191B818300F1C563 /* DoubanWindow.m in Sources */,
+				F4972252191B77C700F1C563 /* Douban.m in Sources */,
+				F42797BF1946F2210034DD3B /* DoubanChannelListView.m in Sources */,
+				F42797C2194736000034DD3B /* DoubanChannel.m in Sources */,
+				F4972256191B77C700F1C563 /* DoubanUser.m in Sources */,
+				F497227C191B780E00F1C563 /* FBEncryptorAES.m in Sources */,
+				F4972243191B779300F1C563 /* DoubanFMUtilities.m in Sources */,
+				F460B59819373B1700FA79C9 /* DoubanPlayListView.m in Sources */,
+				F497227D191B780E00F1C563 /* NSData+Base64.m in Sources */,
+				F43DEF9F1945D988007D436E /* DoubanRequest.m in Sources */,
+				F4972255191B77C700F1C563 /* DoubanSong.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F4075DF7184DDD8300032BD4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F4075DD0184DDD8300032BD4 /* douban.FM */;
-			targetProxy = F4075DF6184DDD8300032BD4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F4075DDD184DDD8300032BD4 /* InfoPlist.strings */ = {
@@ -293,22 +359,6 @@
 			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
-		F4075DE9184DDD8300032BD4 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F4075DEA184DDD8300032BD4 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		F4075DFB184DDD8300032BD4 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F4075DFC184DDD8300032BD4 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -318,7 +368,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -355,7 +405,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -406,46 +456,6 @@
 			};
 			name = Release;
 		};
-		F4075E06184DDD8300032BD4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/douban.FM.app/Contents/MacOS/douban.FM";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "douban.FM/douban.FM-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "douban.FMTests/douban.FMTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		F4075E07184DDD8300032BD4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/douban.FM.app/Contents/MacOS/douban.FM";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "douban.FM/douban.FM-Prefix.pch";
-				INFOPLIST_FILE = "douban.FMTests/douban.FMTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -465,14 +475,7 @@
 				F4075E04184DDD8300032BD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		F4075E05184DDD8300032BD4 /* Build configuration list for PBXNativeTarget "douban.FMTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F4075E06184DDD8300032BD4 /* Debug */,
-				F4075E07184DDD8300032BD4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

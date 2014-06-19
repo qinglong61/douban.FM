@@ -8,6 +8,12 @@
 
 #import <Cocoa/Cocoa.h>
 
+@interface NSControl (target_action)
+
+- (void)setTarget:(id)anObject action:(SEL)aSelector;
+
+@end
+
 @interface DoubanPlayView : NSView
 
 @end

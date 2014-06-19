@@ -31,7 +31,7 @@
 - (NSDictionary *)dictionaryValue
 {
     NSMutableDictionary *dic = [[[NSMutableDictionary alloc] init] autorelease];
-    [self enumeratePropertiesUsingBlock:^(id value, NSString *propertyName) {
+    [self enumeratePropertiesUsingBlock:^(id value, NSString *propertyName, NSString *type) {
         if (!value) {
             value = [NSNull null];
         }
@@ -44,18 +44,11 @@
 
 - (void)encodeWithCoder:(NSCoder *)encoder {
     
-    [self enumeratePropertiesUsingBlock:^(id value, NSString *propertyName) {
-        
-        objc_property_t property = class_getProperty([self class], [propertyName UTF8String]);
-        const char *attributes = property_getAttributes(property);
-        NSString *propertyAttributes = [NSString stringWithUTF8String:attributes];
-        
-        NSString *type = [self getTypeFromAttributes:propertyAttributes];
-        
+    [self enumeratePropertiesUsingBlock:^(id value, NSString *propertyName, NSString *type) {
         if ([type isEqualToString:@"BOOL"]) {
-            [encoder encodeBool:[value boolValue] forKey:propertyName];
+            [encoder encodeBool:value?YES:NO forKey:propertyName];
         } else if ([type isEqualToString:@"NSUInteger"]) {
-            [encoder encodeInteger:[value unsignedIntegerValue] forKey:propertyName];
+            [encoder encodeInt64:[value unsignedIntegerValue] forKey:propertyName];
         } else if ([type isEqualToString:@"NSObject"]) {
             [encoder encodeObject:value forKey:propertyName];
         }
@@ -65,10 +58,17 @@
 - (id)initWithCoder:(NSCoder *)decoder {
     
     if(self = [super init]) {
-        [self enumeratePropertiesUsingBlock:^(id value, NSString *propertyName) {
+        [self enumeratePropertiesUsingBlock:^(id value, NSString *propertyName, NSString *type) {
             SEL setFunction = [self setterFromString:propertyName];
             if ([self respondsToSelector:setFunction]) {
-                id obj = [[decoder decodeObjectForKey:propertyName] retain];
+                id obj = nil;
+                if ([type isEqualToString:@"BOOL"]) {
+                    obj = [[NSNumber numberWithBool:[decoder decodeBoolForKey:propertyName]] retain];
+                } else if ([type isEqualToString:@"NSUInteger"]) {
+                    obj = [[NSNumber numberWithUnsignedInteger:[decoder decodeInt64ForKey:propertyName]] retain];
+                } else if ([type isEqualToString:@"NSObject"]) {
+                    obj = [[decoder decodeObjectForKey:propertyName] retain];
+                }
                 [self performSelector:setFunction withObject:obj];
             }
         }];
@@ -79,7 +79,7 @@
 - (id)copyWithZone:(NSZone *)zone {
     
     DoubanBaseModel *copy = [[[self class] allocWithZone:zone] init];
-    [self enumeratePropertiesUsingBlock:^(id value, NSString *propertyName) {
+    [self enumeratePropertiesUsingBlock:^(id value, NSString *propertyName, NSString *type) {
         SEL setFunction = [copy setterFromString:propertyName];
         if ([copy respondsToSelector:setFunction]) {
             id obj = [[value copyWithZone:zone] autorelease];
@@ -103,7 +103,7 @@
     return @"NSObject";
 }
 
-- (void)enumeratePropertiesUsingBlock:(void (^)(id value, NSString *propertyName))block
+- (void)enumeratePropertiesUsingBlock:(void (^)(id value, NSString *propertyName, NSString *type))block
 {
     unsigned int count;
     objc_property_t *propertyList = class_copyPropertyList([self class], &count);
@@ -113,9 +113,12 @@
         const char *name = property_getName(property);
         NSString *propertyName = [NSString stringWithUTF8String:name];
         id value = [self performSelector:[self getterFromString:propertyName]];
+        const char *attributes = property_getAttributes(property);
+        NSString *propertyAttributes = [NSString stringWithUTF8String:attributes];
+        NSString *type = [self getTypeFromAttributes:propertyAttributes];
 
         if (block) {
-            block(value, propertyName);
+            block(value, propertyName, type);
         }
     }
 }

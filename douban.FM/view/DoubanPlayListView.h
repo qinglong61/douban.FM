@@ -8,6 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface DoubanPlayListView : NSView
+@interface DoubanPlayListView : NSView <NSTableViewDataSource, NSTableViewDelegate>
 
 @end
