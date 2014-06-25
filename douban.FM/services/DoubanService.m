@@ -23,7 +23,7 @@ typedef enum {
 
 @implementation DoubanService
 
-@synthesize likedSongs, user, currentSong, currentChannel, playlist, player, timeObserverToken, currentTime, currentIndex;
+@synthesize likedSongs, searchedSongs, user, currentSong, currentChannel, playlist, player, timeObserverToken, currentTime, currentIndex;
 
 static DoubanService *instance;
 
@@ -60,6 +60,25 @@ static DoubanService *instance;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playDidEnd) name:AVPlayerItemDidPlayToEndTimeNotification object:nil];
     }
     return self;
+}
+
+#pragma mark - search
+
+- (void )searchSong:(NSString *)songName
+{
+    if (songName == nil || songName.length == 0) {
+        self.likedSongs = self.likedSongs;
+        return;
+    }
+    NSMutableArray *result = [NSMutableArray array];
+    for (DoubanSong *song in self.likedSongs) {
+        if ([song.title rangeOfString:songName options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            [result addObject:song];
+        }
+    }
+    if ([result count] > 0) {
+        self.searchedSongs = result;
+    }
 }
 
 #pragma mark - login
@@ -476,6 +495,12 @@ static DoubanService *instance;
     if ([self isCachedSong:sid]) {
         [[NSFileManager defaultManager] removeItemAtPath:[DoubanFMUtilities filePathWithSid:sid] error:NULL];
     }
+}
+
+- (void)removeSong:(NSString *)sid
+{
+    [self.likedSongs removeObject:[self selectBySongId:sid]];
+    self.likedSongs = self.likedSongs;
 }
 
 - (void)revealInFinderBySongId:(NSString *)sid

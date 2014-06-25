@@ -14,6 +14,7 @@
 @interface DoubanService : NSObject <DoubanRequestDelegate>
 
 @property (nonatomic, retain) NSMutableArray *likedSongs;
+@property (nonatomic, retain) NSMutableArray *searchedSongs;
 @property (nonatomic, retain) DoubanUser *user;
 @property (nonatomic, retain) DoubanSong *currentSong;
 @property (nonatomic, retain) DoubanChannel *currentChannel;
@@ -25,12 +26,15 @@
 
 + (DoubanService *)instance;
 
+- (void)searchSong:(NSString *)songName;
+
 - (NSArray *)fetchChannels;
 - (void)switchToChannel:(DoubanChannel *)channel;
 
 - (void)fetchLikedSongs;
 - (void)syncLikedSongs;
 - (void)removeCachedSong:(NSString *)sid;
+- (void)removeSong:(NSString *)sid;
 - (void)revealInFinderBySongId:(NSString *)sid;
 
 - (BOOL)isLogin;

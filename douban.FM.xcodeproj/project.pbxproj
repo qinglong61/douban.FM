@@ -20,6 +20,7 @@
 		F460B59B19373B4300FA79C9 /* DoubanSongListView.m in Sources */ = {isa = PBXBuildFile; fileRef = F460B59A19373B4300FA79C9 /* DoubanSongListView.m */; };
 		F460B59E19373C1E00FA79C9 /* DoubanPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F460B59D19373C1E00FA79C9 /* DoubanPlayView.m */; };
 		F46324B3184F089400104286 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F46324B2184F089400104286 /* WebKit.framework */; };
+		F48888E1195410650077CF8D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F48888E0195410650077CF8D /* Images.xcassets */; };
 		F4972243191B779300F1C563 /* DoubanFMUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = F497223C191B779300F1C563 /* DoubanFMUtilities.m */; };
 		F4972252191B77C700F1C563 /* Douban.m in Sources */ = {isa = PBXBuildFile; fileRef = F4972249191B77C700F1C563 /* Douban.m */; };
 		F4972253191B77C700F1C563 /* DoubanBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F497224B191B77C700F1C563 /* DoubanBaseModel.m */; };
@@ -62,6 +63,7 @@
 		F460B59C19373C1E00FA79C9 /* DoubanPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DoubanPlayView.h; path = view/DoubanPlayView.h; sourceTree = "<group>"; };
 		F460B59D19373C1E00FA79C9 /* DoubanPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DoubanPlayView.m; path = view/DoubanPlayView.m; sourceTree = "<group>"; };
 		F46324B2184F089400104286 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		F48888E0195410650077CF8D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F497223A191B779300F1C563 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		F497223B191B779300F1C563 /* DoubanFMUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoubanFMUtilities.h; sourceTree = "<group>"; };
 		F497223C191B779300F1C563 /* DoubanFMUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoubanFMUtilities.m; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				F4972239191B779300F1C563 /* common */,
 				F4972235191B75B800F1C563 /* view */,
 				F45A2D8C18E409D800102951 /* services */,
+				F48888E0195410650077CF8D /* Images.xcassets */,
 			);
 			path = douban.FM;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F48888E1195410650077CF8D /* Images.xcassets in Resources */,
 				F4075DDF184DDD8300032BD4 /* InfoPlist.strings in Resources */,
 				F4075DE5184DDD8300032BD4 /* Credits.rtf in Resources */,
 			);

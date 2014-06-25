@@ -15,11 +15,13 @@
 {
     NSTableView *_theTableView;
     NSInteger currentRow;
+    NSMutableArray *dataArray;
 }
 
 - (id)initWithFrame:(NSRect)frameRect
 {
     if (self = [super initWithFrame:frameRect]) {
+        dataArray = [DoubanService instance].likedSongs;
         
         NSScrollView *scrollView = [[[NSScrollView alloc] initWithFrame:CGRectMake(0, 0, frameRect.size.width, frameRect.size.height)] autorelease];
         [scrollView setAutoresizingMask:FULLSIZE];
@@ -66,6 +68,7 @@
         
         [[DoubanService instance] addObserver:self forKeyPath:@"currentIndex" options:NSKeyValueObservingOptionNew context:NULL];
         [[DoubanService instance] addObserver:self forKeyPath:@"likedSongs" options:NSKeyValueObservingOptionNew context:NULL];
+        [[DoubanService instance] addObserver:self forKeyPath:@"searchedSongs" options:NSKeyValueObservingOptionNew context:NULL];
     }
     return self;
 }
@@ -99,22 +102,26 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    if ([keyPath isEqualToString:@"currentIndex"] || [keyPath isEqualToString:@"likedSongs"]) {
-        [_theTableView reloadData];
-        [_theTableView scrollRowToVisible:currentRow];
+    if ([keyPath isEqualToString:@"likedSongs"]) {
+        dataArray = [DoubanService instance].likedSongs;
     }
+    if ([keyPath isEqualToString:@"searchedSongs"]) {
+        dataArray = [DoubanService instance].searchedSongs;
+    }
+    [_theTableView reloadData];
+    [_theTableView scrollRowToVisible:currentRow];
 }
 
 #pragma mark NSTableViewDataSource
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
-	return [[DoubanService instance].likedSongs count];
+	return [dataArray count];
 }
 
 - (void)tableView:(NSTableView *)tableView sortDescriptorsDidChange:(NSArray *)oldDescriptors
 {
-    [[DoubanService instance].likedSongs sortUsingDescriptors:[tableView sortDescriptors]];
+    [dataArray sortUsingDescriptors:[tableView sortDescriptors]];
     [tableView reloadData];
 }
 
@@ -127,10 +134,10 @@
 
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
-    NSParameterAssert(row >= 0 && row < [[DoubanService instance].likedSongs count]);
+    NSParameterAssert(row >= 0 && row < [dataArray count]);
     NSTextField *textField = [[[NSTextField alloc] initWithFrame:CGRectMake(0, 0, tableColumn.width, 20)] autorelease];
     [textField setBordered:NO];
-    DoubanSong *song = [[DoubanService instance].likedSongs objectAtIndex:row];
+    DoubanSong *song = [dataArray objectAtIndex:row];
     id value = [song performSelector:NSSelectorFromString([tableColumn identifier])];
     if ([[tableColumn identifier] isEqualToString:@"cached"] || [[tableColumn identifier] isEqualToString:@"liked"]) {
         value = value?@"YES":@"NO";
@@ -160,7 +167,7 @@
     NSInteger clickedRow = [_theTableView clickedRow];
     NSInteger clickedColumn = [_theTableView clickedColumn];
     if (clickedRow != -1 && clickedColumn != -1) {
-        DoubanSong *song = [[DoubanService instance].likedSongs objectAtIndex:clickedRow];
+        DoubanSong *song = [dataArray objectAtIndex:clickedRow];
         if (song) {
             if (clickedColumn == 6) {
                 [[DoubanService instance] revealInFinderBySongId:song.songId];
@@ -199,7 +206,7 @@
 {
     NSInteger clickedRow = [_theTableView clickedRow];
     if (clickedRow != -1) {
-        DoubanSong *song = [[DoubanService instance].likedSongs objectAtIndex:clickedRow];
+        DoubanSong *song = [dataArray objectAtIndex:clickedRow];
         if (song) {
             [[DoubanService instance] like:song.songId Action:song.liked?NO:YES];
         }
@@ -210,10 +217,9 @@
 {
     NSInteger clickedRow = [_theTableView clickedRow];
     if (clickedRow != -1) {
-        DoubanSong *song = [[DoubanService instance].likedSongs objectAtIndex:clickedRow];
+        DoubanSong *song = [dataArray objectAtIndex:clickedRow];
         if (song) {
-            [[DoubanService instance].likedSongs removeObject:song];
-            [DoubanService instance].likedSongs = [DoubanService instance].likedSongs;
+            [[DoubanService instance] removeSong:song.songId];
         }
     }
 }
@@ -222,10 +228,9 @@
 {
     NSInteger clickedRow = [_theTableView clickedRow];
     if (clickedRow != -1) {
-        DoubanSong *song = [[DoubanService instance].likedSongs objectAtIndex:clickedRow];
+        DoubanSong *song = [dataArray objectAtIndex:clickedRow];
         if (song) {
-            [[DoubanService instance].likedSongs removeObject:song];
-            [DoubanService instance].likedSongs = [DoubanService instance].likedSongs;
+            [[DoubanService instance] removeSong:song.songId];
             [[DoubanService instance] removeCachedSong:song.songId];
         }
     }
@@ -242,7 +247,7 @@
 {
     NSInteger clickedRow = [_theTableView clickedRow];
     if (clickedRow != -1) {
-        DoubanSong *song = [[DoubanService instance].likedSongs objectAtIndex:clickedRow];
+        DoubanSong *song = [dataArray objectAtIndex:clickedRow];
         if (song) {
             NSString *title = song.liked?@"unlike":@"like";
             [[menu itemAtIndex:2] setTitle:title];

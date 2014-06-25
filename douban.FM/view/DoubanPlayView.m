@@ -37,7 +37,9 @@ static void *IsIndeterminateContext = &IsIndeterminateContext;
     NSButton *replayBtn;
     NSButton *nextBtn;
     NSButton *likeBtn;
-    NSButton *debugBtn;
+    
+    NSTextField *searchTextField;
+    NSButton *searchBtn;
     
     NSSlider *rateSlider;
     NSTextField *rateLbl;
@@ -96,10 +98,13 @@ static void *IsIndeterminateContext = &IsIndeterminateContext;
         [self addSubview:rateLbl];
         rateLbl.stringValue = @"100%";
         
-        debugBtn = [[[NSButton alloc] initWithFrame:CGRectMake(1090, 10, 100, 40)] autorelease];
-        [self addSubview:debugBtn];
-        [debugBtn setTarget:self action:@selector(debug:)];
-        [debugBtn setTitle:@"debug"];
+        searchTextField = [[[NSTextField alloc] initWithFrame:CGRectMake(950, 10, 100, 40)] autorelease];
+        [self addSubview:searchTextField];
+        
+        searchBtn = [[[NSButton alloc] initWithFrame:CGRectMake(1090, 10, 100, 40)] autorelease];
+        [self addSubview:searchBtn];
+        [searchBtn setTarget:self action:@selector(search:)];
+        [searchBtn setTitle:@"search"];
         
         timeSlider = [[[NSSlider alloc] initWithFrame:CGRectMake(100, 150, 1000, 30)] autorelease];
         [self addSubview:timeSlider];
@@ -203,9 +208,11 @@ static void *IsIndeterminateContext = &IsIndeterminateContext;
     }
 }
 
-- (void)debug:(id)sender
+- (void)search:(id)sender
 {
-    
+    if (searchTextField.stringValue) {
+        [[DoubanService instance] searchSong:searchTextField.stringValue];
+    }
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
