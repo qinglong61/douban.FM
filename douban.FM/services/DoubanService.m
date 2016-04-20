@@ -64,15 +64,18 @@ static DoubanService *instance;
 
 #pragma mark - search
 
-- (void )searchSong:(NSString *)songName
+- (void )search:(NSString *)keyword
 {
-    if (songName == nil || songName.length == 0) {
+    if (keyword == nil || keyword.length == 0) {
         self.likedSongs = self.likedSongs;
         return;
     }
     NSMutableArray *result = [NSMutableArray array];
     for (DoubanSong *song in self.likedSongs) {
-        if ([song.title rangeOfString:songName options:NSCaseInsensitiveSearch].location != NSNotFound) {
+        if ([song.title rangeOfString:keyword options:NSCaseInsensitiveSearch].location != NSNotFound) {
+            [result addObject:song];
+        }
+        if ([song.artist rangeOfString:keyword options:NSCaseInsensitiveSearch].location != NSNotFound) {
             [result addObject:song];
         }
     }

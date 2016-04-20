@@ -26,7 +26,7 @@
 
 + (DoubanService *)instance;
 
-- (void)searchSong:(NSString *)songName;
+- (void)search:(NSString *)keyword;
 
 - (NSArray *)fetchChannels;
 - (void)switchToChannel:(DoubanChannel *)channel;

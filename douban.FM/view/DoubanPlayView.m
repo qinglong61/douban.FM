@@ -100,6 +100,7 @@ static void *IsIndeterminateContext = &IsIndeterminateContext;
         
         searchTextField = [[[NSTextField alloc] initWithFrame:CGRectMake(950, 10, 100, 40)] autorelease];
         [self addSubview:searchTextField];
+        searchTextField.delegate = self;
         
         searchBtn = [[[NSButton alloc] initWithFrame:CGRectMake(1090, 10, 100, 40)] autorelease];
         [self addSubview:searchBtn];
@@ -211,7 +212,14 @@ static void *IsIndeterminateContext = &IsIndeterminateContext;
 - (void)search:(id)sender
 {
     if (searchTextField.stringValue) {
-        [[DoubanService instance] searchSong:searchTextField.stringValue];
+        [[DoubanService instance] search:searchTextField.stringValue];
+    }
+}
+
+- (void)controlTextDidEndEditing:(NSNotification *)obj
+{
+    if (obj.object == searchTextField) {
+        [self search:searchBtn];
     }
 }
 

@@ -14,6 +14,6 @@
 
 @end
 
-@interface DoubanPlayView : NSView
+@interface DoubanPlayView : NSView <NSTextFieldDelegate>
 
 @end
